@@ -9,27 +9,27 @@ spring:
     gateway:
       routes:
         - id: account-service
-          uri: http://localhost:8201
+          uri: lb://account-service
           predicates:
-            - Path=/api/v*/auth/**,/api/v*/users/**,/api/v*/drivers/**,/api/v*/admin/users/** ,/internal/v*/account/**,
+            - Path=/api/v*/auth/**,/api/v*/users/**,/api/v*/drivers/**,/api/v*/admin/users/**,/internal/v*/account/**
 
         - id: dispatch-service
-          uri: http://localhost:8202
+          uri: lb://dispatch-service
           predicates:
             - Path=/api/v*/dispatches/**,/api/v*/admin/dispatches/**,/internal/v*/dispatches/**
 
         - id: trip-service
-          uri: http://localhost:8203
+          uri: lb://trip-service
           predicates:
             - Path=/api/v*/trips/**,/api/v*/policies/**,/api/v*/admin/trips/**,/internal/v*/trips/**
 
         - id: payment-service
-          uri: http://localhost:8204
+          uri: lb://payment-service
           predicates:
             - Path=/api/v*/payments/**,/api/v*/admin/payments/**,/internal/v*/payments/**,/api/v*/refunds/**,/api/v*/refund/requests/**,/api/v*/admin/refunds/**,/api/v*/admin/refund/requests/**
 
         - id: support-service
-          uri: http://localhost:8205
+          uri: lb://support-service
           predicates:
             - Path=/api/v*/supports/**,/api/v*/admin/supports/**,/internal/v*/supports/**
 
