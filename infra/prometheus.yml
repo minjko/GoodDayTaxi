@@ -13,7 +13,7 @@ scrape_configs:
     scrape_interval: 10s
     scrape_timeout: 5s
     static_configs:
-      - targets: ['10.1.0.196:8080']
+      - targets: ['host.docker.internal:8080'] # [prod] 10.1.0.196:8080
 
 
   # ========================
@@ -22,7 +22,7 @@ scrape_configs:
   - job_name: 'account-service'
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['10.1.0.195:8201']
+      - targets: ['host.docker.internal:8201'] # [prod] 10.1.0.195:8201
 
 
   # ========================
@@ -33,7 +33,7 @@ scrape_configs:
     scrape_timeout: 10s
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['10.2.0.160:8202']
+      - targets: ['host.docker.internal:8202'] # [prod] 10.2.0.160:8202
 
 
 
@@ -43,7 +43,7 @@ scrape_configs:
   - job_name: 'trip-service'
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['10.2.0.26:8203']
+      - targets: ['host.docker.internal:8203'] # [prod] 10.2.0.26:8203
 
 
   # ========================
@@ -52,7 +52,7 @@ scrape_configs:
   - job_name: 'payment-service'
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['10.2.0.69:8204']
+      - targets: ['host.docker.internal:8204'] # [prod] 10.2.0.69:8204
 
 
   # ========================
@@ -61,7 +61,7 @@ scrape_configs:
   - job_name: 'support-service'
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['10.1.0.70:8205']
+      - targets: ['host.docker.internal:8205'] # [prod] 10.1.0.70:8205
 
 
   # ========================
@@ -69,5 +69,5 @@ scrape_configs:
   # ========================
   - job_name: 'redis'
     static_configs:
-      - targets: ['10.2.0.28:9121']
+      - targets: ['redis-exporter:9121'] # [prod] 10.2.0.28:9121 또는 redis-exporter:9121
 
