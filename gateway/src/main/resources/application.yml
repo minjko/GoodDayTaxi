@@ -2,8 +2,7 @@ spring:
   application:
     name: gateway
   profiles:
-    active: ${SPRING_PROFILES_ACTIVE:prod}
-
+    active: ${SPRING_PROFILES_ACTIVE:local}
 
   main:
     web-application-type: reactive
@@ -26,3 +25,4 @@ management:
   metrics:
     tags:
       application: gateway
+

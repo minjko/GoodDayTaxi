@@ -7,7 +7,7 @@
 
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://openjdk.java.net/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue.svg)](https://www.postgresql.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-blue.svg)](https://docs.docker.com/compose/)
 [![Kafka](https://img.shields.io/badge/Apache%20Kafka-3.x-red.svg)](https://kafka.apache.org/)
 
@@ -50,7 +50,7 @@ GoodDayTaxi는 **승객, 기사, 관리자**가 함께 사용하는 통합 택�
 #### **Backend**
 - **Framework**: Spring Boot 3.5.x, Spring Security, Spring Data JPA
 - **Language**: Java 17, Gradle 8.14
-- **Database**: PostgreSQL 16
+- **Database**: PostgreSQL 15
 - **Cache**: Redis 7.x
 - **Message Queue**: Apache Kafka 3.x, RabbitMQ
 - **Authentication**: JWT (JSON Web Token)
@@ -97,7 +97,7 @@ GoodDayTaxi는 **승객, 기사, 관리자**가 함께 사용하는 통합 택�
 
 - **Java 17** 이상
 - **Docker & Docker Compose**
-- **PostgreSQL 16** (Docker로 실행 권장)
+- **PostgreSQL 15** (Docker로 실행 권장)
 - **Redis** (Docker로 실행 권장)
 - **Apache Kafka** (Docker로 실행 권장)
 
